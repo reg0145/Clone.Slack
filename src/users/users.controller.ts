@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Res } from "@nestjs/common";
+import { Body, Controller, Get, Post, Res } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
