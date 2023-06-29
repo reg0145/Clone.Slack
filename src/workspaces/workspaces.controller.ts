@@ -3,15 +3,15 @@ import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 @Controller('workspaces')
 export class WorkspacesController {
   @Get()
-  getAllWorkspace(){}
+  getMyWorkspaces(){}
   @Post()
-  addWorkspace(@Body('workspace') workspace, @Body('url') url){}
+  createWorkspace(@Body('workspace') workspace, @Body('url') url){}
   @Get(':workspace/members')
-  getAllMemberInWorkspace() {}
+  getAllMemberFromWorkspace() {}
   @Post(':workspace/members')
-  inviteMemgerFromWorkspace(@Body('email') email) {}
+  inviteMemberToWorkspace(@Body('email') email) {}
   @Get(':workspace/users/:id')
-  getMemberInWorkspace(){}
+  getMemberInfoInWorkspace(){}
   @Delete(':workspace/members/:id')
-  deleteMemberInWorkspace(@Param('id') id) {}
+  kickMemberInWorkspace(@Param('id') id) {}
 }
