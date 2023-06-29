@@ -13,9 +13,9 @@ export class ChannelsController {
   @Get(':channel/unreads')
   getUnreadsFromChannel() {}
   @Post(':channel/chats')
-  saveChannel(@Body('content') content) {}
+  saveChat(@Body('content') content) {}
   @Get(':channel/members')
-  getMembersFromChannel() {}
+  getAllMember() {}
   @Post(':channel/members')
   inviteMemberToChannel(@Body('email') email) {}
 }
