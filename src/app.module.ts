@@ -4,9 +4,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { ChannelsModule } from './channels/channels.module';
+import { WorkspacesModule } from './workspaces/workspaces.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), UsersModule, ChannelsModule],
+  imports: [UsersModule, ChannelsModule, WorkspacesModule],
   controllers: [AppController],
   providers: [AppService],
 })
