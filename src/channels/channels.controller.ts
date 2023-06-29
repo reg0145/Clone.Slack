@@ -7,7 +7,7 @@ export class ChannelsController {
   @Post()
   CreateChannel(@Body('name') name) {}
   @Get(':name')
-  getChannel(){}
+  getSpecificChannel(){}
   @Get(':channel/chats')
   getChatsFromChannel(){}
   @Get(':channel/unreads')
